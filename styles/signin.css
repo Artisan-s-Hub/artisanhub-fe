@@ -117,3 +117,12 @@ border-radius: 50px !important;
   border-top: 2px solid var(--primary-clr);
 }
 
+@media (max-width: 769px) {
+  .color-section {
+    display: none !important;
+  }
+  .form-section {
+    width: 100% !important;
+    padding: 60px 10%;
+  }
+}

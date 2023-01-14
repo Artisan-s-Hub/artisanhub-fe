@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../assets/logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../styles/category.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script src="../js/index.js" defer></script>
+    <script src="../js/category.js" defer></script>
+    <title>Artisan</title>
+  </head>
+  <body>
+    <main class="w-100">
+      <section class="w-90 mx-auto">
+        <!-- navigation -->
+        <section class="w-100 fixed-top navigation">
+          <nav class="navbar navbar-expand-lg w-90 mx-auto py-3">
+            <div
+              class="w-100 d-lg-flex justify-content-lg-between align-items-lg-center"
+            >
+              <!-- logo and hamburger -->
+              <section
+                class="logo-hamburger d-flex align-items-center justify-content-between"
+              >
+                <div class="w-img">
+                  <a
+                    href="/"
+                    class="navbar-brand"
+                    style="width: 100%; height: 100%"
+                  >
+                    <img
+                      src="../assets/logo.svg"
+                      alt="logo"
+                      class="img-fluid"
+                    />
+                  </a>
+                </div>
+
+                <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasNavbar"
+                  aria-controls="offcanvasNavbar"
+                >
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              </section>
+
+              <!-- off canvas -->
+
+              <section
+                class="offcanvas offcanvas-end"
+                tabindex="-1"
+                id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel"
+              >
+                <div
+                  class="offcanvas-header d-flex d-lg-none justify-content-end"
+                >
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"
+                  ></button>
+                </div>
+
+                <div
+                  class="offcanvas-body w-custom-75 d-lg-flex justify-content-lg-end align-self-lg-end"
+                >
+                  <div class="search-box me-5 position-relative">
+                    <input
+                      type="text"
+                      class="form-control rounded-pill"
+                      id="search-item"
+                      placeholder="Search"
+                      onkeyup="search()"
+                    />
+                    <i class="fas fa-search position-absolute"></i>
+                  </div>
+
+                  <div class="navigation-wrapper d-lg-flex w-100">
+                    <ul
+                      class="navbar-nav justify-content-start flex-grow-1 pe-3"
+                    >
+                      <li class="nav-item">
+                        <a
+                          class="nav-link active-link text-uppercase"
+                          aria-current="page"
+                          href="/"
+                          >home</a
+                        >
+                      </li>
+
+                      <li class="nav-item">
+                        <a class="nav-link text-uppercase" href="#">about us</a>
+                      </li>
+
+                      <li class="nav-item">
+                        <a class="nav-link text-uppercase" href="#">contact</a>
+                      </li>
+
+                      <li class="nav-item">
+                        <a
+                          class="nav-link text-uppercase"
+                          href="./blog_section/blog.html"
+                          >book now</a
+                        >
+                      </li>
+
+                      <li class="nav-item">
+                        <a class="nav-link text-uppercase" href="#">faq</a>
+                      </li>
+                    </ul>
+
+                    <div
+                      class="btn-2-wrapper bg-active-btn border border-1 overflow-hidden bg-black rounded-pill"
+                    >
+                      <button class="btn w-100 h-100">
+                        <a
+                          class="nav-link text-uppercase text-decoration-none border-bottom-0 text-yellow"
+                          href="#"
+                          >Log Out</a
+                        >
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </nav>
+        </section>
+
+        <!-- page content -->
+        <section class="w-100 pt-custom d-flex justify-content-lg-between">
+          <div class="btn-grp">
+            <button
+              type="submit"
+              class="btn btn-warning text-black text-center"
+              id="toggle-btn-beauty"
+            >
+              Beauty and Cosmetics
+            </button>
+            <button
+              type="submit"
+              class="btn btn-warning text-black text-center"
+            >
+              Domestic and Office
+            </button>
+            <button
+              type="submit"
+              class="btn btn-warning text-black text-center"
+              id="toggle-btn-craft"
+            >
+              Electronics
+            </button>
+            <button
+              type="submit"
+              class="btn btn-warning text-black text-center"
+            >
+              Building and Construction
+            </button>
+          </div>
+          <div class="icons d-flex justify-content-between flex-wrap">
+            <a href="#"><i class="fas fa-bell fs-2 text-black"></i></a>
+            <a href="#"><i class="fas fa-user-circle fs-2 text-black"></i></a>
+          </div>
+        </section>
+
+        <section class="heading-section">
+          <h2 class="text-capitalize text-white text-center bg-black">
+            hire the best beauty and cosmetic artisans here!
+          </h2>
+        </section>
+
+        <section id="category-list">
+          <section id="toggle-beauty" class="toggle" style="display: block">
+            <div class="row">
+              <div class="col-md-4 position-relative item">
+                <div class="card">
+                  <img
+                    src="../assets/images/hairDresser.png"
+                    alt="Hair Dresser"
+                  />
+                  <div
+                    class="d-flex justify-content-between bg-black position-absolute w-100 align-items-center ps-4 pe-4 bottom-0"
+                  >
+                    <div class="text-white">
+                      <h4>Hair Dresser</h4>
+                      <p>313 customer</p>
+                    </div>
+                    <div>
+                      <a
+                        href=""
+                        class="btn btn-warning text-black text-center rounded-pill"
+                        >Learn</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 position-relative item">
+                <div class="card">
+                  <img src="../assets/images/manicurist.png" alt="Manicurist" />
+                  <div
+                    class="d-flex justify-content-between bg-black position-absolute w-100 align-items-center ps-4 pe-4 bottom-0"
+                  >
+                    <div class="text-white">
+                      <h4>Manicurist</h4>
+                      <p>313 customer</p>
+                    </div>
+                    <div>
+                      <a
+                        href=""
+                        class="btn btn-warning text-black text-center rounded-pill"
+                        >Learn</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 position-relative item">
+                <div class="card">
+                  <img
+                    src="../assets/images/makeupArtist.png"
+                    alt="Makeup Artist"
+                  />
+                  <div
+                    class="d-flex justify-content-between bg-black position-absolute w-100 align-items-center ps-4 pe-4 bottom-0"
+                  >
+                    <div class="text-white">
+                      <h4>Makeup Artist</h4>
+                      <p>313 customer</p>
+                    </div>
+                    <div>
+                      <a
+                        href=""
+                        class="btn btn-warning text-black text-center rounded-pill"
+                        >Learn</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 position-relative item">
+                <div class="card">
+                  <img
+                    src="../assets/images/pedicurist.png"
+                    alt=" Pedicurist"
+                  />
+                  <div
+                    class="d-flex justify-content-between bg-black position-absolute w-100 align-items-center ps-4 pe-4 bottom-0"
+                  >
+                    <div class="text-white">
+                      <h4>Pedicurist</h4>
+                      <p>313 customer</p>
+                    </div>
+                    <div>
+                      <a
+                        href=""
+                        class="btn btn-warning text-black text-center rounded-pill"
+                        >Learn</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 position-relative item">
+                <div class="card">
+                  <img
+                    src="../assets/images/fashionDesigner.png"
+                    alt="Fashion Designer"
+                  />
+                  <div
+                    class="d-flex justify-content-between bg-black position-absolute w-100 align-items-center ps-4 pe-4 bottom-0"
+                  >
+                    <div class="text-white">
+                      <h4>Fashion Designer</h4>
+                      <p>313 customer</p>
+                    </div>
+                    <div>
+                      <a
+                        href=""
+                        class="btn btn-warning text-black text-center rounded-pill"
+                        >Learn</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 position-relative item">
+                <div class="card">
+                  <img src="../assets/images/geleMaker.png" alt="Gele Maker" />
+                  <div
+                    class="d-flex justify-content-between bg-black position-absolute w-100 align-items-center ps-4 pe-4 bottom-0"
+                  >
+                    <div class="text-white">
+                      <h4>Gele Maker</h4>
+                      <p>313 customer</p>
+                    </div>
+                    <div>
+                      <a
+                        href=""
+                        class="btn btn-warning text-black text-center rounded-pill"
+                        >Learn</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Toggle -->
+          <section id="toggle-craft" class="toggle" style="display: none">
+            <div class="row">
+              <div class="col-md-4 position-relative item">
+                <div class="card">
+                  <img src="../assets/images/plumber.png" alt="Plumber" />
+                  <div
+                    class="d-flex justify-content-between bg-black position-absolute w-100 align-items-center ps-4 pe-4 bottom-0"
+                  >
+                    <div class="text-white">
+                      <h4>Plumber</h4>
+                      <p>313 customer</p>
+                    </div>
+                    <div>
+                      <a
+                        href=""
+                        class="btn btn-warning text-black text-center rounded-pill"
+                        >Learn</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 position-relative item">
+                <div class="card">
+                  <img src="../assets/images/carpenter.png" alt="Carpenter" />
+                  <div
+                    class="d-flex justify-content-between bg-black position-absolute w-100 align-items-center ps-4 pe-4 bottom-0"
+                  >
+                    <div class="text-white">
+                      <h4>Carpenter</h4>
+                      <p>313 customer</p>
+                    </div>
+                    <div>
+                      <a
+                        href=""
+                        class="btn btn-warning text-black text-center rounded-pill"
+                        >Learn</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 position-relative item">
+                <div class="card">
+                  <img src="../assets/images/engineer.png" alt="Engineer" />
+                  <div
+                    class="d-flex justify-content-between bg-black position-absolute w-100 align-items-center ps-4 pe-4 bottom-0"
+                  >
+                    <div class="text-white">
+                      <h4>Engineer</h4>
+                      <p>313 customer</p>
+                    </div>
+                    <div>
+                      <a
+                        href=""
+                        class="btn btn-warning text-black text-center rounded-pill"
+                        >Learn</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 position-relative item">
+                <div class="card">
+                  <img src="../assets/images/painter.png" alt="Painter" />
+                  <div
+                    class="d-flex justify-content-between bg-black position-absolute w-100 align-items-center ps-4 pe-4 bottom-0"
+                  >
+                    <div class="text-white">
+                      <h4>Painter</h4>
+                      <p>313 customer</p>
+                    </div>
+                    <div>
+                      <a
+                        href=""
+                        class="btn btn-warning text-black text-center rounded-pill"
+                        >Learn</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 position-relative item">
+                <div class="card">
+                  <img
+                    src="../assets/images/electrician.png"
+                    alt="Electrician"
+                  />
+                  <div
+                    class="d-flex justify-content-between bg-black position-absolute w-100 align-items-center ps-4 pe-4 bottom-0"
+                  >
+                    <div class="text-white">
+                      <h4>Electrician</h4>
+                      <p>313 customer</p>
+                    </div>
+                    <div>
+                      <a
+                        href=""
+                        class="btn btn-warning text-black text-center rounded-pill"
+                        >Learn</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 position-relative item">
+                <div class="card">
+                  <img
+                    src="../assets/images/solarInstaller.png"
+                    alt="Solar Installer"
+                  />
+                  <div
+                    class="d-flex justify-content-between bg-black position-absolute w-100 align-items-center ps-4 pe-4 bottom-0"
+                  >
+                    <div class="text-white">
+                      <h4>Solar Installer</h4>
+                      <p>313 customer</p>
+                    </div>
+                    <div>
+                      <a
+                        href=""
+                        class="btn btn-warning text-black text-center rounded-pill"
+                        >Learn</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-row">
+          <div class="footer-col">
+            <h4>For Clients</h4>
+            <ul>
+              <li><a href="#">How to Hire</a></li>
+              <li><a href="#">Talent Place</a></li>
+              <li><a href="#">Hire Nationwide</a></li>
+              <li><a href="#">Search Talent Now</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>For Talent</h4>
+            <ul>
+              <li><a href="#">How to Find Work</a></li>
+              <li><a href="#">Direct Contact</a></li>
+              <li><a href="#">Find Artisan</a></li>
+              <li><a href="#">Work Nationwide</a></li>
+              <li><a href="#">Enterprise</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#">about us</a></li>
+              <li><a href="#">our services</a></li>
+              <li><a href="#">privacy policy</a></li>
+              <li><a href="#">Contact us</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>follow us</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

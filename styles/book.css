@@ -1,0 +1,190 @@
+@import url(./index.css);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-clr: #ffe606;
+  --white-clr: #ffffff;
+}
+
+/* CSS reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  /* max-width: 100%; */
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+/* Utilities */
+.btn-warning {
+  background-color: var(--primary-clr) !important;
+}
+
+body {
+  background:#ece9e9 !important;
+}
+.pt-custom {
+  padding-top: 100px;
+}
+/* Booking section */
+
+.book-heading {
+    background: #D9D9D9;
+    width: 50%;
+    padding: 5px;
+    margin: 30px auto;
+}
+.book-heading h2 {
+    font-weight: 800;
+font-size: 40px;
+line-height: 150%;
+}
+.form {
+    background: var(--primary-clr);
+    padding: 60px;
+    width: 60%;
+    margin: 0 auto 50px;
+}
+.submit {
+    width: 30%;
+    margin: 0 auto;
+}
+
+
+/* footer */
+.footer-container{
+	max-width: 1170px;
+	margin:auto;
+}
+.footer-row{
+	display: flex;
+	flex-wrap: wrap;
+}
+.footer ul{
+	list-style: none;
+  padding-left: 0;
+}
+.footer{
+	background-color: rgba(255, 230, 6, 1) !important;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	text-decoration: none;
+	font-weight: 300;
+  color: black;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: rgb(104, 102, 102);
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(0, 0, 0, 1);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+/*responsive*/
+
+@media(max-width: 767px){
+ 
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+.book-heading, .form {
+    width: 100%;
+}
+
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+.form {
+    padding: 20px;
+}
+.book-heading h2 {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 150%;
+}
+}

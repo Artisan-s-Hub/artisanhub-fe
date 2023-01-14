@@ -143,3 +143,13 @@ form input:focus {
   right: 5px;
   visibility: hidden;
 }
+
+@media (max-width: 769px) {
+  .color-section {
+    display: none !important;
+  }
+  .form-section {
+    width: 100% !important;
+    padding: 60px 10%;
+  }
+}
