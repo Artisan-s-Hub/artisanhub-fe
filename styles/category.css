@@ -1,0 +1,263 @@
+@import url(./index.css);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-clr: #ffe606;
+  --white-clr: #ffffff;
+}
+
+/* CSS reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  /* max-width: 100%; */
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+/* Utilities */
+.btn-warning {
+  background-color: var(--primary-clr) !important;
+}
+
+body {
+  background: var(--white-clr);
+}
+.pt-custom {
+  padding-top: 100px;
+}
+
+.btn-grp button:not(:last-child) {
+  margin-right: 50px;
+}
+.btn-grp button {
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  padding: 10px 20px;
+  transition: all 0.5s ease-out;
+}
+.btn-grp button:hover {
+  background: rgb(237, 215, 11) !important;
+  transform: scale(1.1);
+}
+
+.icons {
+  width: 7%;
+}
+
+.search-box .form-control {
+  padding-left: 40px;
+}
+.search-box .fas {
+  top: 10px;
+  left: 15px;
+}
+
+.heading-section {
+  margin: 40px 0 60px;
+}
+.heading-section h2 {
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 150%;
+  padding: 10px 0;
+}
+.item {
+  margin-bottom: 30px;
+}
+.item h4 {
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 150%;
+  margin-bottom: 0;
+}
+.item p {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+}
+
+.item .card {
+  cursor: pointer;
+  transition: transform 0.5s ease-in;
+}
+
+.item .card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(113, 110, 110, 0.3) !important;
+  transition: opacity 0.15s ease-in;
+  opacity: 0;
+}
+
+.item .card:hover::after {
+  opacity: 1;
+}
+.item .card:hover {
+  transform: scale(1.03);
+}
+.bg-yellow {
+  background-color: rgba(255, 230, 6, 1) !important;
+}
+
+/* footer */
+.footer-container {
+  max-width: 1170px;
+  margin: auto;
+}
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer ul {
+  list-style: none;
+  padding-left: 0;
+}
+.footer {
+  background-color: rgba(255, 230, 6, 1) !important;
+  padding: 70px 0;
+}
+.footer-col {
+  width: 25%;
+  padding: 0 15px;
+}
+.footer-col h4 {
+  font-size: 18px;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+.footer-col h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-weight: 300;
+  color: black;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover {
+  color: rgb(104, 102, 102);
+  padding-left: 8px;
+}
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(0, 0, 0, 1);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover {
+  color: #24262b;
+  background-color: #ffffff;
+}
+
+/*responsive*/
+@media (max-width: 1025px) {
+  .btn-grp button:not(:last-child) {
+    margin-right: 10px;
+  }
+  .icons {
+    width: 10%;
+  }
+  .heading-section h2 {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 28px;
+    padding: 10px 0;
+  }
+  .item h4 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+    margin-bottom: 0;
+    padding-top: 5px;
+  }
+  .card a {
+    font-size: 14px;
+    padding: 2px 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .heading-section h2 {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    padding: 10px 0;
+  }
+  .footer-col {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 574px) {
+  .footer-col {
+    width: 100%;
+  }
+}
